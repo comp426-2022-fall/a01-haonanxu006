@@ -32,7 +32,7 @@ const data = fs.readFile('./public/index.html', 'utf8', (err, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 
 const server = http.createServer((req, res) => {
-	res.statusCode(200);
+	res.statusCode = 200;
 	res.setHeader('Content-Type', 'text/html');
 	res.end(data);
 });
